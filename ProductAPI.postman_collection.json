@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "bd6d0bdd-6966-4f53-a8b0-a4df57184650",
+		"name": "ProductAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44430655",
+		"_collection_link": "https://naresh-6028629.postman.co/workspace/Naresh's-Workspace~aa78b295-cb5c-4788-8d27-9f0e84ae1edd/collection/44430655-bd6d0bdd-6966-4f53-a8b0-a4df57184650?action=share&source=collection_link&creator=44430655"
+	},
+	"item": [
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product",
+							"value": "{\n    \"name\": \"Jeans\",\n    \"description\": \"Levi Jeans\",\n    \"brand\": \"Levi Jejen\",\n    \"price\": 59,\n    \"category\": \"fash\",\n    \"releaseDate\": \"30-04-2023\",\n    \"stockQuantity\": 10,\n    \"available\": true\n}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/guntu/Downloads/PanCard.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "product",
+							"value": "{\n    \"id\": 7,\n    \"name\": \"Jeans\",\n    \"description\": \"Levi Jeans\",\n    \"brand\": \"Levi Jejen\",\n    \"price\": 59,\n    \"category\": \"fash\",\n    \"releaseDate\": \"30-04-2023\",\n    \"stockQuantity\": 10,\n    \"available\": true\n}",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "product",
+							"value": "{\n    \"name\": \"Je\",\n    \"description\": \"Levi Jeans\",\n    \"brand\": \"Levi Jejen\",\n    \"price\": 59.00,\n    \"category\": \"fash\",\n    \"releaseDate\": \"30-04-2023\",\n    \"stockQuantity\": 10,\n    \"available\": true\n}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Sechay-Guest/Pictures/imh.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
